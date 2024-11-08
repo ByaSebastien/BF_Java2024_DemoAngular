@@ -1,0 +1,17 @@
+<h2>Demo Directives</h2>
+<section>
+  <h3>Component directives</h3>
+  <div>
+    <h4>NgStyle</h4>
+    <p class="bold" [ngStyle]="{color: myColor,}">🎄Joyeux Noël🎄</p>
+  </div>
+  <div>
+    <h4>NgClass</h4>
+    <p [ngClass]="{bold: isBold,big: isBig,italic:isItalic}">J'ai besoin d'une petite pause...</p>
+    <div class="buttons">
+      <button (click)="toggleIsBold()">Bold</button>
+      <button (click)="toggleIsBig()">Big</button>
+      <button (click)="toggleIsItalic()">Italic</button>
+    </div>
+  </div>
+</section>

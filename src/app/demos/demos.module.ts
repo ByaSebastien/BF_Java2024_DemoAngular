@@ -5,12 +5,14 @@ import { DemosRoutingModule } from './demos-routing.module';
 import { DemoBindingsComponent } from './demo-bindings/demo-bindings.component';
 import { DemoPipesComponent } from './demo-pipes/demo-pipes.component';
 import {SharedModule} from '../shared/shared.module';
+import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 
 
 @NgModule({
   declarations: [
     DemoBindingsComponent,
-    DemoPipesComponent
+    DemoPipesComponent,
+    DemoDirectivesComponent
   ],
   imports: [
     CommonModule,
