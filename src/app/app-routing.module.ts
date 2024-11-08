@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'exo', loadChildren: () => import('./exos/exos.module').then(m => m.ExosModule)},
+  {path: 'demo', loadChildren: () => import('./demos/demos.module').then(m => m.DemosModule)},
 ];
 
 @NgModule({

@@ -20,3 +20,13 @@ a:hover {
   text-decoration: underline;
   transform: scale(1.1);
 }
+
+.not-a-link {
+  cursor: default;
+  transition: none;
+}
+
+.not-a-link:hover{
+  text-decoration: none;
+  transform: none;
+}
