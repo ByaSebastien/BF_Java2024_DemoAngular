@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ExosRoutingModule } from './exos-routing.module';
 import { TimerComponent } from './timer/timer.component';
 import { ExosComponent } from './exos.component';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExosComponent } from './exos.component';
   ],
   imports: [
     CommonModule,
-    ExosRoutingModule
+    ExosRoutingModule,
+    SharedModule,
   ]
 })
 export class ExosModule { }

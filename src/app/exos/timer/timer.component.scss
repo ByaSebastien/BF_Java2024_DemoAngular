@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+
+  section {
+    width: 400px;
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+  }
+}

@@ -1,1 +1,9 @@
-<p>timer works!</p>
+<section>
+  <h3>Timer</h3>
+  <h4>{{ secondes | time}}</h4>
+  <div class="buttons">
+    <button (click)="start()" [disabled]="timer">Start</button>
+    <button (click)="pause()" [disabled]="!timer">Pause</button>
+    <button (click)="reset()" [disabled]="secondes <= 0 && !timer">Reset</button>
+  </div>
+</section>
