@@ -15,3 +15,32 @@
     </div>
   </div>
 </section>
+<section>
+  <h3>Structural directives</h3>
+  <h4>NgIf / if</h4>
+  <div>
+    <!--    <p *ngIf="isDayTime">🌞Jour🌞</p>-->
+    <!--    <p *ngIf="!isDayTime">🌛Nuit🌜</p>-->
+    @if (isDayTime) {
+      <p>🌞Jour🌞</p>
+    } @else {
+      <p>🌛Nuit🌜</p>
+    }
+    <button (click)="toggleIsDayTime()">Switch</button>
+  </div>
+  <h4>NgFor / for</h4>
+  <div class="cards">
+    <!--    <div class="card" *ngFor="let trainer of trainers">-->
+    <!--      <h5>{{ trainer.firstname }} {{ trainer.lastname }}</h5>-->
+    <!--      <img [src]="'assets/images/' + trainer.pictureUrl" [alt]="'Photo de ' + trainer.firstname">-->
+    <!--    </div>-->
+    @for (trainer of trainers; track trainer.id) {
+      <div class="card" [ngClass]="{disabled:!trainer.isActive}">
+        <h5>{{ trainer.firstname }} {{ trainer.lastname }}</h5>
+        <img [src]="'assets/images/' + trainer.pictureUrl" [alt]="'Photo de ' + trainer.firstname">
+      </div>
+    } @empty {
+      <p>La liste est vide</p>
+    }
+  </div>
+</section>

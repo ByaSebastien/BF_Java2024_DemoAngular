@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Trainer} from '../../shared/models/trainer';
 
 @Component({
   selector: 'app-demo-directives',
@@ -14,6 +15,32 @@ export class DemoDirectivesComponent {
   isBold: boolean = false;
   isBig: boolean = false;
   isItalic: boolean = false;
+
+  isDayTime: boolean = true;
+
+  trainers: Trainer[] = [
+    {
+      id: 1,
+      firstname: 'Seb',
+      lastname: 'Bya',
+      pictureUrl: 'seb.png',
+      isActive: true,
+    },
+    {
+      id: 2,
+      firstname: 'Flavian',
+      lastname: 'Ovyn',
+      pictureUrl: 'flavian.png',
+      isActive: true,
+    },
+    {
+      id: 3,
+      firstname: 'Alex',
+      lastname: 'Kimtsaris',
+      pictureUrl: 'alex.png',
+      isActive: false,
+    }
+  ];
 
   constructor() {
     setInterval(() => {
@@ -31,5 +58,9 @@ export class DemoDirectivesComponent {
 
   toggleIsItalic(): void {
     this.isItalic = !this.isItalic;
+  }
+
+  toggleIsDayTime(): void {
+    this.isDayTime = !this.isDayTime;
   }
 }

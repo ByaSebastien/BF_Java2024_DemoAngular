@@ -14,3 +14,29 @@
   display: flex;
   justify-content: space-between;
 }
+
+.cards {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .card {
+    width: 30%;
+    border: solid 1px black;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .disabled {
+    filter: blur(3px);
+  }
+}
