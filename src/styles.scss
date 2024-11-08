@@ -37,8 +37,7 @@ h2 {
 
 section {
   padding: 1rem;
-  background-color: darkcyan;
-  border: 2px solid black;
+  border: 2px solid darkcyan;
   width: fit-content;
   margin: 0 3rem 1.5rem;
   display: flex;
@@ -47,7 +46,7 @@ section {
   border-radius: 0.5rem;
 
   h3 {
-    color: white;
+    color: darkcyan;
   }
 
   div {
@@ -66,14 +65,16 @@ input {
 button {
   padding: 0.5rem 1rem;
   margin: 0.5rem 0;
-  background-color: white;
-  color : var(--light);
+  background-color: darkcyan;
+  color : white;
   border : none;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: transform 0.3s ease;
 
   &:hover {
-    background-color: lightgrey;
+    color: black;
+    transform: scale(1.1);
   }
   &:disabled {
     background-color: #29737325;
