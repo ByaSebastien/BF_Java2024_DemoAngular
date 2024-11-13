@@ -32,6 +32,10 @@ export class NavComponent {
           title: 'Directives',
           url: '/demo/demo03'
         },
+        {
+          title: 'Input / Output',
+          url: '/demo/demo04'
+        },
       ],
     },
     {

@@ -1,0 +1,23 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (fruit of fruits; track fruit) {
+      <tr>
+        <td>{{ fruit }}</td>
+        <td>
+          <button (click)="selectFruit(fruit)">
+            ❌
+          </button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+@if(selectedFruit){
+  <app-delete-dialog (onResponse)="reactToUserResponse($event)" [fruit]="selectedFruit"></app-delete-dialog>
+}

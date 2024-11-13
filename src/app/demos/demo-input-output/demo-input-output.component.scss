@@ -1,0 +1,40 @@
+table {
+
+  width: 500px;
+
+  border-collapse: collapse;
+  margin-left: 1rem;
+
+  thead {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid gray;
+
+    tr {
+      padding: 3rem 0;
+
+      th {
+        text-align: left;
+        padding-bottom: 1rem;
+      }
+
+      th:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+      margin-top: 1rem;
+      border-bottom: 1px solid gray;
+
+      td:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+}
