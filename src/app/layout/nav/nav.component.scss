@@ -13,6 +13,10 @@
 
     li {
 
+      a {
+        cursor: pointer;
+      }
+
       ul{
         display: flex;
         flex-direction: column;
