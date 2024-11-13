@@ -10,7 +10,7 @@
       <tr>
         <td>{{ fruit }}</td>
         <td>
-          <button (click)="selectFruit(fruit)">
+          <button (click)="selectFruit(fruit)" [disabled]="selectedFruit">
             ❌
           </button>
         </td>
@@ -19,5 +19,7 @@
   </tbody>
 </table>
 @if(selectedFruit){
-  <app-delete-dialog (onResponse)="reactToUserResponse($event)" [fruit]="selectedFruit"></app-delete-dialog>
+  <app-delete-dialog @fadeInOut (onResponse)="reactToUserResponse($event)" [fruit]="selectedFruit">
+    <h3>Delete dialog</h3>
+  </app-delete-dialog>
 }

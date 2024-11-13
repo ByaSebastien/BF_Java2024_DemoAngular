@@ -3,7 +3,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 @Component({
   selector: 'app-delete-dialog',
   templateUrl: './delete-dialog.component.html',
-  styleUrl: './delete-dialog.component.scss'
+  styleUrl: './delete-dialog.component.scss',
 })
 export class DeleteDialogComponent {
 

@@ -8,6 +8,7 @@ import {SharedModule} from '../shared/shared.module';
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.component';
 import { DeleteDialogComponent } from './demo-input-output/delete-dialog/delete-dialog.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
