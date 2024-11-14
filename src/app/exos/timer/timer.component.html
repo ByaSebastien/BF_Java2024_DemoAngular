@@ -1,9 +1,48 @@
 <section>
+  <!-- Section heading for the timer -->
   <h3>Timer</h3>
-  <h4>{{ secondes | time}}</h4>
+
+  <!-- Display the elapsed time formatted using the custom 'time' pipe -->
+  <h4>{{ secondes | time }}</h4>
+  <!--
+    The 'secondes' value is passed through the 'time' pipe for formatting.
+    The 'time' pipe converts the total seconds into a human-readable "HH:mm:ss" format.
+  -->
+
   <div class="buttons">
-    <button (click)="start()" [disabled]="timer">Start</button>
-    <button (click)="pause()" [disabled]="!timer">Pause</button>
-    <button (click)="reset()" [disabled]="secondes <= 0 && !timer">Reset</button>
+    <!-- Button to start the timer -->
+    <button
+      (click)="start()"
+      [disabled]="timer">
+      Start
+    </button>
+    <!--
+      - (click)="start()": Calls the 'start()' method when the button is clicked.
+      - [disabled]="timer": Disables the button if the timer is already running (i.e., 'timer' is not null).
+    -->
+
+    <!-- Button to pause the timer -->
+    <button
+      (click)="pause()"
+      [disabled]="!timer">
+      Pause
+    </button>
+    <!--
+      - (click)="pause()": Calls the 'pause()' method when the button is clicked.
+      - [disabled]="!timer": Disables the button if the timer is not running (i.e., 'timer' is null).
+    -->
+
+    <!-- Button to reset the timer -->
+    <button
+      (click)="reset()"
+      [disabled]="secondes <= 0 && !timer">
+      Reset
+    </button>
+    <!--
+      - (click)="reset()": Calls the 'reset()' method when the button is clicked.
+      - [disabled]="secondes <= 0 && !timer": Disables the button if:
+        - The timer is already reset (i.e., 'secondes' is 0).
+        - The timer is not running (i.e., 'timer' is null).
+    -->
   </div>
 </section>

@@ -1,11 +1,22 @@
 <ul>
+  <!-- Loop through each link in the 'links' array -->
   @for(link of links; track link.title){
     <li>
-      <a (click)="toggleIsVisible(link)" [routerLink]="link.url">{{link.title}}</a>
+      <!-- Render a link element for each main navigation item -->
+      <a
+        (click)="toggleIsVisible(link)"
+        [routerLink]="link.url">
+        <!-- Display the title of the link -->
+        {{link.title}}
+      </a>
+
+      <!-- Conditionally render a nested list if the link has children and they are visible -->
       @if(link.children && link.isChildrenVisible){
         <ul>
+          <!-- Loop through each child link in the 'children' array of the current link -->
           @for(childLink of link.children; track childLink.title){
             <li>
+              <!-- Render a link element for each child navigation item -->
               <a [routerLink]="childLink.url">{{childLink.title}}</a>
             </li>
           }

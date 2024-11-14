@@ -1,28 +1,63 @@
 <section>
+  <!-- Main container for the product list table -->
+
   <h3>Liste des produits</h3>
+  <!-- Heading for the product list -->
+
   <table>
+    <!-- Table for displaying the products -->
+
     <thead>
+    <!-- Table header -->
     <tr>
       <th>Nom du produit</th>
+      <!-- Column for product name -->
       <th>Quantité</th>
+      <!-- Column for product quantity -->
       <th>Actions</th>
+      <!-- Column for action buttons -->
     </tr>
     </thead>
+
     <tbody>
+    <!-- Table body where product rows are dynamically rendered -->
       @for (product of products; track product.name; let i = $index) {
+        <!--
+          - Iterates over the products array.
+          - Tracks rows by the product name for efficient updates.
+          - Uses the $index variable to identify the current product index.
+        -->
+
         <tr>
+          <!-- Table row for each product -->
           <td>{{ product.name }}</td>
+          <!-- Displays the product's name -->
           <td>{{ product.quantity }}</td>
+          <!-- Displays the product's quantity -->
           <td class="buttons">
-            <button (click)="triggerChangeList({index: i,changeType: ChangeTypeEnum.DOWN})">➖</button>
-            <button (click)="triggerChangeList({index: i,changeType: ChangeTypeEnum.UP})">➕</button>
-            <button (click)="triggerChangeList({index: i,changeType: ChangeTypeEnum.REMOVE})">❌</button>
+            <!-- Action buttons for managing the product -->
+            <button (click)="triggerChangeList({index: i, changeType: ChangeTypeEnum.DOWN})">➖</button>
+            <!--
+              Button to decrease the quantity of the product.
+              Emits a ChangeList event with index and changeType: DOWN.
+            -->
+            <button (click)="triggerChangeList({index: i, changeType: ChangeTypeEnum.UP})">➕</button>
+            <!--
+              Button to increase the quantity of the product.
+              Emits a ChangeList event with index and changeType: UP.
+            -->
+            <button (click)="triggerChangeList({index: i, changeType: ChangeTypeEnum.REMOVE})">❌</button>
+            <!--
+              Button to remove the product from the list.
+              Emits a ChangeList event with index and changeType: REMOVE.
+            -->
           </td>
         </tr>
       }
     </tbody>
   </table>
-  <ul>
 
+  <ul>
+    <!-- Placeholder for additional elements or features, if needed -->
   </ul>
 </section>

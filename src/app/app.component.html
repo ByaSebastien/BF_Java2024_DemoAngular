@@ -1,14 +1,28 @@
 <header>
   <app-header></app-header>
 </header>
+<!-- The <header> element represents the top section of the page, typically used for branding or navigation.
+     The <app-header> is a custom Angular component (declared in your app) that handles the header's content, such as a logo or main navigation. -->
+
 <div class="content">
+  <!-- This <div> wraps the main content of the page and is often styled to provide layout or spacing. -->
+
   <nav>
     <app-nav></app-nav>
   </nav>
+  <!-- The <nav> element is used for navigation links or menus.
+       The <app-nav> is another custom Angular component that likely contains navigation menus or sidebars. -->
+
   <main>
     <router-outlet></router-outlet>
   </main>
+  <!-- The <main> element is the main content area of the page.
+       The <router-outlet> is a special Angular directive that acts as a placeholder for components rendered by the Angular Router.
+       Based on the current route, Angular dynamically loads the corresponding component here. -->
 </div>
+
 <footer>
   <app-footer></app-footer>
 </footer>
+<!-- The <footer> element represents the bottom section of the page, typically used for copyright, contact info, or links.
+     The <app-footer> is another custom Angular component, which likely includes footer content like social media links or additional navigation. -->

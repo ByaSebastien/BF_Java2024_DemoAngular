@@ -1,13 +1,38 @@
+<!-- The declaration that this is an HTML5 document. -->
 <!doctype html>
 <html lang="en">
+<!-- The `lang` attribute specifies the language of the document's content.
+     Here, it is set to "en" (English), which improves accessibility and SEO. -->
+
 <head>
+  <!-- The <head> section contains metadata and references to external resources like styles and icons. -->
   <meta charset="utf-8">
+  <!-- Specifies the character encoding for the HTML document.
+       "utf-8" is the standard encoding that supports most characters and symbols worldwide. -->
+
   <title>BFJava2024Angular</title>
+  <!-- The title of the web page, which appears in the browser tab and in search engine results.
+       "BFJava2024Angular" is the name of this project. -->
+
   <base href="/">
+  <!-- The <base> tag specifies the base URL for all relative URLs in the document.
+       It is crucial for routing in Angular applications, ensuring that relative paths resolve correctly. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This meta tag ensures the web page is responsive.
+       The `width=device-width` sets the page width to match the device's screen width,
+       and `initial-scale=1` ensures a 1:1 scale for clarity. -->
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Specifies the icon for the web page, shown in the browser tab.
+       The `favicon.ico` is usually a small graphic representing the application. -->
 </head>
+
 <body>
-  <app-root></app-root>
+<!-- The main content of the application will be rendered here. -->
+<app-root></app-root>
+<!-- The custom Angular component `<app-root>` is the root component defined in your application.
+     When the application is bootstrapped, Angular replaces this tag with the content of the root component.
+     All other components of the application are rendered inside this root. -->
 </body>
 </html>

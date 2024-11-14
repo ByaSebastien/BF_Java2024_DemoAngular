@@ -1,28 +1,68 @@
 :host {
+  /* The :host pseudo-class styles the root element of the Angular component. */
+
   display: flex;
+  /* Applies Flexbox layout to the root element. */
+
   background-color: #489fb5;
+  /* Sets a blue background color for the navigation menu. */
+
   height: 100%;
+  /* Ensures the height of the navigation matches its parent container. */
+
   padding: 1rem 0.5rem;
+  /* Adds padding:
+     - 1rem on the top and bottom.
+     - 0.5rem on the left and right. */
+
   width: 12.5rem;
+  /* Sets a fixed width for the navigation menu. */
 
   ul {
+    /* Targets all unordered lists (<ul>) inside the component. */
+
     display: flex;
+    /* Makes the list a Flexbox container. */
+
     flex-direction: column;
+    /* Arranges the list items vertically. */
+
     gap: 0.5rem;
+    /* Adds spacing between each list item. */
+
     list-style: none;
+    /* Removes the default bullet points from the list. */
 
     li {
+      /* Targets each list item (<li>) inside the unordered list. */
 
       a {
+        /* Targets all anchor tags (<a>) inside list items. */
+
         cursor: pointer;
+        /* Changes the cursor to a pointer to indicate interactivity. */
       }
 
-      ul{
+      ul {
+        /* Targets nested unordered lists inside list items. */
+
         display: flex;
+        /* Makes the nested list a Flexbox container. */
+
         flex-direction: column;
+        /* Arranges the nested list items vertically. */
+
         gap: 0.5rem;
+        /* Adds spacing between each nested list item. */
+
         list-style: none;
+        /* Removes bullet points from nested lists as well. */
+
         padding: 0.5rem 1rem 0;
+        /* Adds padding:
+           - 0.5rem on the top.
+           - 1rem on the left and right (indenting the nested list).
+           - No padding on the bottom. */
       }
     }
   }

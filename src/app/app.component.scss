@@ -1,15 +1,33 @@
 :host {
+  /* The :host pseudo-class targets the root element of the Angular component.
+     It allows you to apply styles directly to the component's container without affecting other components. */
+
   display: flex;
+  /* Sets the component's root element to use Flexbox for layout. */
+
   flex-direction: column;
+  /* Arranges child elements of the root in a vertical column. */
+
   min-height: 100vh;
+  /* Ensures the component spans at least the full height of the viewport. */
 
   div {
+    /* Targets <div> elements inside the :host component. */
     display: flex;
+    /* Makes the div a Flexbox container. */
+
     flex: 1;
+    /* Allows the div to grow and fill the available space proportionally. */
 
     main {
+      /* Targets <main> elements inside the <div> within the :host component. */
       flex: 1;
+      /* Allows the <main> section to grow and occupy the remaining space in the div. */
+
       padding: 1rem 0.5rem;
+      /* Adds padding inside the <main> section for spacing:
+         - 1rem for top and bottom.
+         - 0.5rem for left and right. */
     }
   }
 }

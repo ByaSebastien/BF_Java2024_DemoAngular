@@ -1,21 +1,41 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {TimerComponent} from './timer/timer.component';
-import {ExosComponent} from './exos.component';
-import {ShoppingListComponent} from './shopping-list/shopping-list.component';
+// Importing Angular core's NgModule decorator to define this file as a module.
+import { NgModule } from '@angular/core';
+// Importing RouterModule and Routes to enable and configure Angular routing.
+import { RouterModule, Routes } from '@angular/router';
+// Importing the components to be associated with specific routes.
+import { TimerComponent } from './timer/timer.component';
+import { ExosComponent } from './exos.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
+// Defining the routes for this feature module.
 const routes: Routes = [
   {
-    path: '', component: ExosComponent, children: [
-      {path: 'exo01', component: TimerComponent},
-      {path: 'exo02', component: ShoppingListComponent},
+    // Default path for the module, associated with the ExosComponent.
+    path: '',
+    component: ExosComponent,
+    children: [
+      // Nested route for the 'exo01' path, associated with the TimerComponent.
+      { path: 'exo01', component: TimerComponent },
+      // Nested route for the 'exo02' path, associated with the ShoppingListComponent.
+      { path: 'exo02', component: ShoppingListComponent },
     ]
   },
 ];
 
 @NgModule({
+  // Importing the RouterModule and configuring it with the defined routes.
   imports: [RouterModule.forChild(routes)],
+  /*
+   * forChild is used here because this is a feature module.
+   * It registers the routes specific to this module without reinitializing the router.
+   */
+
+  // Exporting the RouterModule so the routes can be accessed by other parts of the application.
   exports: [RouterModule]
 })
 export class ExosRoutingModule {
+  /*
+   * The ExosRoutingModule defines and manages the routing configuration for the Exos feature module.
+   * It ensures that the components associated with the routes are loaded correctly.
+   */
 }

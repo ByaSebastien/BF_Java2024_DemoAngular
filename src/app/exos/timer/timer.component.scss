@@ -1,16 +1,58 @@
 :host {
+  /*
+   * The :host pseudo-class targets the root element of the Angular component.
+   * This ensures that styles are scoped to this specific component, maintaining modularity.
+   */
+
   display: flex;
+  /*
+   * Sets the root element to use a Flexbox layout, allowing child elements to align and position flexibly.
+   */
+
   flex-direction: column;
+  /*
+   * Arranges the child elements (like the <section> tag) in a vertical column layout.
+   */
+
   width: 1000px;
+  /*
+   * Defines a fixed width for the entire component, ensuring consistent sizing.
+   */
 
   section {
+    /*
+     * Targets the <section> tag inside this component, applying specific styles to it.
+     */
+
     width: 400px;
+    /*
+     * Sets the width of the section to 400px, making it smaller than the parent container for visual clarity.
+     */
 
     .buttons {
+      /*
+       * Targets the `.buttons` class inside the section, styling the button container specifically.
+       */
+
       width: 100%;
+      /*
+       * Ensures the button container spans the full width of the section.
+       */
+
       display: flex;
+      /*
+       * Applies a Flexbox layout to the button container, allowing for flexible alignment of buttons.
+       */
+
       justify-content: space-between;
+      /*
+       * Distributes the buttons evenly across the container, with equal spacing between and around them.
+       */
+
       margin: 0;
+      /*
+       * Removes any default margins around the button container for a cleaner layout.
+       */
     }
   }
 }

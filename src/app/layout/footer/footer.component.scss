@@ -1,8 +1,38 @@
 :host {
+  /*
+   * The :host pseudo-class targets the root element of this Angular component.
+   * It ensures that the styles are scoped to this specific component, preventing style leakage to other components.
+   */
+
   display: flex;
+  /*
+   * Applies Flexbox layout to the root element.
+   * This allows easy alignment and positioning of child elements.
+   */
+
   justify-content: center;
+  /*
+   * Horizontally centers the content within the component's container.
+   */
+
   align-items: center;
+  /*
+   * Vertically centers the content within the component's container.
+   */
+
   padding: 0.5rem;
+  /*
+   * Adds 0.5rem of padding on all sides of the component.
+   * This creates space between the content and the edges of the component.
+   */
+
   background-color: #82c0cc;
+  /*
+   * Sets the background color to a light teal shade (#82c0cc), providing a visually appealing and calming design.
+   */
+
   color: black;
+  /*
+   * Sets the text color to black, ensuring good contrast and readability against the light teal background.
+   */
 }

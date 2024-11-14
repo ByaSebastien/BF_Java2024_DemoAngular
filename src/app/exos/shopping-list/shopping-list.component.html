@@ -1,16 +1,51 @@
 <h2>Shopping list</h2>
+<!-- The main heading for the shopping list section. -->
+
 <section class="product-list">
+  <!-- Section for managing the shopping list, styled with the 'product-list' class. -->
+
   <h3>Ajouter un produit</h3>
+  <!-- Subheading for the product addition form. -->
+
   <div class="product-form">
+    <!-- Wrapper for the product addition form. -->
+
     <div>
+      <!-- Input field for the product name. -->
       <label for="productName">Nom de produit</label>
+      <!-- Label for the product name input field. -->
       <input id="productName" type="text" [(ngModel)]="productName">
+      <!--
+        - Two-way binding with [(ngModel)] to bind the input field to the 'productName' property in the component.
+        - Updates the 'productName' property whenever the user types into the field.
+      -->
     </div>
+
     <div>
+      <!-- Input field for the product quantity. -->
       <label for="productQuantity">Quantité</label>
+      <!-- Label for the product quantity input field. -->
       <input id="productQuantity" type="number" [(ngModel)]="productQuantity">
+      <!--
+        - Two-way binding with [(ngModel)] to bind the input field to the 'productQuantity' property in the component.
+        - Updates the 'productQuantity' property whenever the user changes the value.
+      -->
     </div>
+
     <button (click)="addProduct()">Ajouter</button>
+    <!--
+      - Button to add a new product to the list.
+      - (click)="addProduct()" binds the button click event to the 'addProduct' method in the component.
+    -->
   </div>
-  <app-sub-shopping-list (changeList)="reactToChangeList($event)" [products]="products"></app-sub-shopping-list>
+
+  <app-sub-shopping-list
+    (changeList)="reactToChangeList($event)"
+    [products]="products">
+  </app-sub-shopping-list>
+  <!--
+    - <app-sub-shopping-list>: Custom child component for displaying and managing the list of products.
+    - [products]="products": Passes the 'products' array from the parent component to the child component as an input property.
+    - (changeList)="reactToChangeList($event)": Binds the 'changeList' event from the child component to the 'reactToChangeList' method in the parent component.
+  -->
 </section>

@@ -1,12 +1,47 @@
 :host {
+  /*
+   * The :host pseudo-class targets the root element of the Angular component.
+   * It allows you to apply styles directly to the component container while keeping them scoped.
+   */
+
   display: flex;
+  /*
+   * Sets the display property of the component to Flexbox, enabling a flexible layout for child elements.
+   */
+
   justify-content: center;
+  /*
+   * Aligns child elements horizontally to the center of the container.
+   */
+
   align-items: center;
+  /*
+   * Aligns child elements vertically to the center of the container.
+   */
+
   background-color: #16697a;
+  /*
+   * Sets the background color of the component to a dark teal color (#16697a).
+   */
+
   padding: 1rem;
+  /*
+   * Adds padding of 1rem on all sides of the component to create space between its content and edges.
+   */
 
   h1 {
+    /*
+     * Targets <h1> elements inside the component, allowing for specific styling of headings.
+     */
+
     color: #ede7e3;
+    /*
+     * Sets the text color of the heading to a light cream shade (#ede7e3), creating a strong contrast against the background.
+     */
+
     font-size: 1.75rem;
+    /*
+     * Increases the font size of the heading to 1.75 times the root font size, making it prominent.
+     */
   }
 }
