@@ -31,6 +31,7 @@
       <label for="confirmPassword">Mot de passe de confirmation : </label>
       <input id="confirmPassword" type="password" placeholder="mot de passe de confirmation" formControlName="confirmPassword">
       <app-form-error [control]="personForm.get('confirmPassword')"></app-form-error>
+      <app-form-error [control]="personForm"></app-form-error>
     </div>
     <div>
       <label for="phoneNumber">Numéro de téléphone : </label>
