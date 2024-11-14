@@ -1,7 +1,7 @@
 // Importing the Component decorator from Angular core to define the class as a component.
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 // Importing the Link interface/model to define the structure of navigation links.
-import { Link } from '../../shared/models/link';
+import {Link} from '../../shared/models/link';
 
 @Component({
   selector: 'app-nav',
@@ -46,6 +46,10 @@ export class NavComponent {
           title: 'Input / Output',
           url: '/demo/demo04'
         },
+        {
+          title: 'Formulaires',
+          url: '/demo/demo05'
+        },
       ],
     },
     {
@@ -59,6 +63,10 @@ export class NavComponent {
         {
           title: 'Shopping list',
           url: 'exo/exo02'
+        },
+        {
+          title: 'Formulaire',
+          url: 'exo/exo03'
         },
       ],
     },

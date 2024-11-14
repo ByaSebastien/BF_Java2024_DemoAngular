@@ -14,6 +14,7 @@ import { SubShoppingListComponent } from './shopping-list/sub-shopping-list/sub-
 
 // Importing the SharedModule to reuse shared pipes, directives, and modules.
 import { SharedModule } from '../shared/shared.module';
+import { ExoFormulaireComponent } from './exo-formulaire/exo-formulaire.component';
 
 @NgModule({
   // Declaring the components that belong to this module.
@@ -21,7 +22,7 @@ import { SharedModule } from '../shared/shared.module';
     TimerComponent, // Component for the Timer functionality.
     ExosComponent, // The parent component for this module's features.
     ShoppingListComponent, // Component for the Shopping List feature.
-    SubShoppingListComponent // Sub-component for managing items in the Shopping List.
+    SubShoppingListComponent, ExoFormulaireComponent // Sub-component for managing items in the Shopping List.
   ],
   // Importing other modules required for this module's functionality.
   imports: [

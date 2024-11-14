@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TimerComponent } from './timer/timer.component';
 import { ExosComponent } from './exos.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import {ExoFormulaireComponent} from './exo-formulaire/exo-formulaire.component';
 
 // Defining the routes for this feature module.
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
       { path: 'exo01', component: TimerComponent },
       // Nested route for the 'exo02' path, associated with the ShoppingListComponent.
       { path: 'exo02', component: ShoppingListComponent },
+      { path: 'exo03', component: ExoFormulaireComponent},
     ]
   },
 ];
