@@ -36,6 +36,10 @@ export class NavComponent {
           title: 'Input / Output',
           url: '/demo/demo04'
         },
+        {
+          title: 'Formulaire',
+          url: '/demo/demo05'
+        },
       ],
     },
     {

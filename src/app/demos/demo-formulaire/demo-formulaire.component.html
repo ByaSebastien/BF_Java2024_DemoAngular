@@ -1,0 +1,65 @@
+<h2>Demo Formulaire</h2>
+<section>
+  <h3>Person form</h3>
+  <form [formGroup]="personForm" (ngSubmit)="submit()">
+    <div>
+      <label for="firstName">Prénom : </label>
+      <input id="firstName" type="text" placeholder="Prénom" formControlName="firstName">
+      <app-form-error [control]="personForm.get('firstName')"></app-form-error>
+    </div>
+    <div>
+      <label for="lastName">Nom : </label>
+      <input id="lastName" type="text" placeholder="Nom" formControlName="lastName">
+      <app-form-error [control]="personForm.get('lastName')"></app-form-error>
+    </div>
+    <div>
+      <label for="birthDate">Date de naissance : </label>
+      <input id="birthDate" type="date" formControlName="birthDate">
+      <app-form-error [control]="personForm.get('birthDate')"></app-form-error>
+    </div>
+    <div>
+      <label for="email">Email : </label>
+      <input id="email" type="email" placeholder="email" formControlName="email">
+      <app-form-error [control]="personForm.get('email')"></app-form-error>
+    </div>
+    <div>
+      <label for="password">Mot de passe : </label>
+      <input id="password" type="password" placeholder="mot de passe" formControlName="password">
+      <app-form-error [control]="personForm.get('password')"></app-form-error>
+    </div>
+    <div>
+      <label for="confirmPassword">Mot de passe de confirmation : </label>
+      <input id="confirmPassword" type="password" placeholder="mot de passe de confirmation" formControlName="confirmPassword">
+      <app-form-error [control]="personForm.get('confirmPassword')"></app-form-error>
+    </div>
+    <div>
+      <label for="phoneNumber">Numéro de téléphone : </label>
+      <input id="phoneNumber" type="tel" placeholder="tel" formControlName="phoneNumber">
+      <app-form-error [control]="personForm.get('phoneNumber')"></app-form-error>
+    </div>
+    <div>
+      <label for="siblings">Nombre de frères et soeurs : </label>
+      <input id="siblings" type="text" placeholder="Nombre de frères/soeurs" formControlName="siblings">
+      <app-form-error [control]="personForm.get('siblings')"></app-form-error>
+    </div>
+    <div>
+      <label for="country">Pays : </label>
+      <select id="country" formControlName="country">
+        <option value="be">Belgique</option>
+        <option value="fr">France</option>
+        <option value="jp">Japon</option>
+        <option value="am">Arménie</option>
+        <option value="br">Bretagne</option>
+      </select>
+      <app-form-error [control]="personForm.get('country')"></app-form-error>
+    </div>
+    <div>
+      <label for="single">Célibataire : </label>
+      <input id="single" type="checkbox" formControlName="single">
+      <app-form-error [control]="personForm.get('single')"></app-form-error>
+    </div>
+    <div>
+      <button type="submit">Envoyer</button>
+    </div>
+  </form>
+</section>
