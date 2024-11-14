@@ -1,0 +1,28 @@
+<section>
+  <h3>Liste des produits</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Nom du produit</th>
+      <th>Quantité</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (product of products; track product.name; let i = $index) {
+        <tr>
+          <td>{{ product.name }}</td>
+          <td>{{ product.quantity }}</td>
+          <td class="buttons">
+            <button (click)="triggerChangeList({index: i,changeType: ChangeTypeEnum.DOWN})">➖</button>
+            <button (click)="triggerChangeList({index: i,changeType: ChangeTypeEnum.UP})">➕</button>
+            <button (click)="triggerChangeList({index: i,changeType: ChangeTypeEnum.REMOVE})">❌</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <ul>
+
+  </ul>
+</section>

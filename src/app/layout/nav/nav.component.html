@@ -5,7 +5,9 @@
       @if(link.children && link.isChildrenVisible){
         <ul>
           @for(childLink of link.children; track childLink.title){
-            <a [routerLink]="childLink.url">{{childLink.title}}</a>
+            <li>
+              <a [routerLink]="childLink.url">{{childLink.title}}</a>
+            </li>
           }
         </ul>
       }

@@ -45,7 +45,11 @@ export class NavComponent {
         {
           title: 'Timer',
           url: 'exo/exo01'
-        }
+        },
+        {
+          title: 'Shopping list',
+          url: 'exo/exo02'
+        },
       ],
     },
   ];
