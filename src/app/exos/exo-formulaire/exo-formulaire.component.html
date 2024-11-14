@@ -1,0 +1,79 @@
+<h2>Exo Formulaire</h2>
+
+<section>
+  <h3>RDV form</h3>
+
+  <form [formGroup]="rdvForm" (ngSubmit)="submit()">
+
+    <div>
+      <label for="firstName">First Name : </label>
+      <input id="firstName" type="text" placeholder="First name" formControlName="firstName">
+      <app-form-error [control]="rdvForm.get('firstName')"></app-form-error>
+    </div>
+
+    <div>
+      <label for="lastName">Last Name : </label>
+      <input id="lastName" type="text" placeholder="Last name" formControlName="lastName">
+      <app-form-error [control]="rdvForm.get('lastName')"></app-form-error>
+    </div>
+
+    <div>
+      <label for="description">Description : </label>
+      <input id="description" type="text" placeholder="Description" formControlName="description">
+      <app-form-error [control]="rdvForm.get('description')"></app-form-error>
+    </div>
+
+    <div>
+      <label for="email">Email : </label>
+      <input id="email" type="text" placeholder="Email" formControlName="email">
+      <app-form-error [control]="rdvForm.get('email')"></app-form-error>
+    </div>
+
+    <div>
+      <label for="rdvDate">Date de Rendez-vous : </label>
+      <input id="rdvDate" type="date" placeholder="Date" formControlName="email">
+      <app-form-error [control]="rdvForm.get('rdvDate')"></app-form-error>
+    </div>
+
+    <div>
+      <label for="rdvHome">Rendez-vous sur place? : </label>
+      <input id="rdvHome" type="checkbox" formControlName="rdvHome">
+      <app-form-error [control]="rdvForm.get('rdvDate')"></app-form-error>
+    </div>
+
+    <div *ngIf="rdvForm.get('rdvHome')?.value">
+      <label for="country">Pays de residence : </label>
+      <input id="country" type="text" formControlName="country">
+      <app-form-error [control]="addressForm.get('country')"></app-form-error>
+    </div>
+
+    <div *ngIf="rdvForm.get('rdvHome')?.value">
+      <label for="city">Ville de residence : </label>
+      <input id="city" type="text" formControlName="city">
+      <app-form-error [control]="addressForm.get('city')"></app-form-error>
+    </div>
+
+    <div *ngIf="rdvForm.get('rdvHome')?.value">
+      <label for="district">Commune de residence : </label>
+      <input id="district" type="text" formControlName="district">
+      <app-form-error [control]="addressForm.get('district')"></app-form-error>
+    </div>
+
+    <div *ngIf="rdvForm.get('rdvHome')?.value">
+      <label for="street">Rue : </label>
+      <input id="street" type="text" formControlName="street">
+      <app-form-error [control]="addressForm.get('street')"></app-form-error>
+    </div>
+
+    <div *ngIf="rdvForm.get('rdvHome')?.value">
+      <label for="number">Numero : </label>
+      <input id="number" type="number" formControlName="number">
+      <app-form-error [control]="addressForm.get('number')"></app-form-error>
+    </div>
+
+    <div>
+      <button type="submit">Envoyer</button>
+      <!-- Submits the form -->
+    </div>
+  </form>
+</section>

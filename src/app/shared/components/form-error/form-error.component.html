@@ -1,0 +1,66 @@
+@if (control && errors && !control.untouched) {
+  <!--
+    Ensures that:
+    - `control` exists (i.e., a FormControl is passed).
+    - `errors` exist (validation errors are present on the control).
+    - The control has been touched (to avoid showing errors before user interaction).
+  -->
+
+  @if (errors['required']) {
+    <!-- Displays an error if the 'required' validator fails -->
+    <span class="error">Champs requis</span>
+    <!-- 'Champs requis' means 'Field required' -->
+  }
+
+  @if (errors['minlength']) {
+    <!-- Displays an error if the input is shorter than the minimum length -->
+    <span class="error">Minimum {{ errors['minlength'].requiredLength }} éléments</span>
+    <!--
+      - `errors['minlength'].requiredLength` provides the required minimum length.
+      - The error message dynamically shows the required length.
+    -->
+  }
+
+  @if (errors['maxlength']) {
+    <!-- Displays an error if the input is longer than the maximum length -->
+    <span class="error">Maximum {{ errors['maxlength'].requiredLength }} éléments</span>
+    <!--
+      - `errors['maxlength'].requiredLength` provides the maximum allowed length.
+      - The error message dynamically shows the maximum length.
+    -->
+  }
+
+  @if (errors['min']) {
+    <!-- Displays an error if the input is less than the minimum value -->
+    <span class="error">Minimum {{ errors['min'].min }}</span>
+    <!-- 'errors['min'].min' provides the minimum required value. -->
+  }
+
+  @if (errors['max']) {
+    <!-- Displays an error if the input exceeds the maximum value -->
+    <span class="error">Maximum {{ errors['max'].max }}</span>
+    <!-- 'errors['max'].max' provides the maximum allowed value. -->
+  }
+
+  @if (errors['email']) {
+    <!-- Displays an error if the 'email' validator fails -->
+    <span class="error">Email non valide</span>
+    <!-- 'Email non valide' means 'Invalid email'. -->
+  }
+
+  @if (errors['beforeToday']) {
+    <!-- Displays an error if the date is not in the past (custom validator) -->
+    <span class="error">La date doit être dans le passé</span>
+    <!-- 'La date doit être dans le passé' means 'The date must be in the past'. -->
+  }
+
+  @if (errors['samePassword']) {
+    <!-- Displays an error if the passwords do not match (custom validator) -->
+    <span class="error">Les mots de passe doivent être identiques</span>
+    <!-- 'Les mots de passe doivent être identiques' means 'Passwords must match'. -->
+  }
+
+  @if (errors['weekAfter']) {
+    <span class="error">La date de votre rdv est trop lointaine</span>
+  }
+}
