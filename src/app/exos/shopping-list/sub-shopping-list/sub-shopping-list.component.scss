@@ -1,22 +1,11 @@
-section {
+td,th {
 
-  table {
+  padding-right: 2rem;
+}
 
-    thead, tbody {
-       tr{
+.buttons {
 
-         td,th {
-
-           padding-right: 2rem;
-         }
-
-         .buttons {
-
-           button{
-            margin: 5px;
-           }
-         }
-       }
-    }
+  button{
+    margin: 5px;
   }
 }
