@@ -40,6 +40,10 @@ export class NavComponent {
           title: 'Formulaire',
           url: '/demo/demo05'
         },
+        {
+          title: 'HttpClient',
+          url: '/demo/demo06'
+        },
       ],
     },
     {

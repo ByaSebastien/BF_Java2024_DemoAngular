@@ -9,6 +9,7 @@ import { NavComponent } from './layout/nav/nav.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {provideHttpClient} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

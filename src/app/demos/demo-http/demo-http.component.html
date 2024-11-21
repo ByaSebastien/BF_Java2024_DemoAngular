@@ -1,0 +1,27 @@
+<h2>Demo appel API</h2>
+<section>
+  @if (yugiResult.meta.previous_page) {
+    <button (click)="previous()">⬅️</button>
+  }
+  @if (yugiResult.meta.next_page) {
+    <button (click)="next()">➡️</button>
+  }
+  @for (card of yugiResult.data; track card.id) {
+    <div class="card">
+      <div class="left">
+        <h3>{{ card.name }}</h3>
+        <h2>{{ card.humanReadableCardType }}</h2>
+        <p>{{ card.desc }}</p>
+      </div>
+      <div class="right">
+        <img [src]="card.card_images[0].image_url">
+      </div>
+    </div>
+  }
+  @if (yugiResult.meta.previous_page) {
+    <button (click)="previous()">⬅️</button>
+  }
+  @if (yugiResult.meta.next_page) {
+    <button (click)="next()">➡️</button>
+  }
+</section>

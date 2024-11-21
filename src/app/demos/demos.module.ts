@@ -10,6 +10,7 @@ import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.
 import { DeleteDialogComponent } from './demo-input-output/delete-dialog/delete-dialog.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DemoFormulaireComponent } from './demo-formulaire/demo-formulaire.component';
+import { DemoHttpComponent } from './demo-http/demo-http.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DemoFormulaireComponent } from './demo-formulaire/demo-formulaire.compo
     DemoDirectivesComponent,
     DemoInputOutputComponent,
     DeleteDialogComponent,
-    DemoFormulaireComponent
+    DemoFormulaireComponent,
+    DemoHttpComponent
   ],
   imports: [
     CommonModule,
