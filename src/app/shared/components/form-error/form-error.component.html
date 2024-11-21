@@ -23,4 +23,7 @@
   @if (errors['samePassword']) {
     <span class="error">Les mots de passes doivent être identique</span>
   }
+  @if (errors['afterOneWeek']) {
+    <span class="error">La date doit être dans minimum une semaine</span>
+  }
 }

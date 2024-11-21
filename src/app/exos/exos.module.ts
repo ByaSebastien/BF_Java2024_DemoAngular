@@ -7,6 +7,7 @@ import { ExosComponent } from './exos.component';
 import {SharedModule} from '../shared/shared.module';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { SubShoppingListComponent } from './shopping-list/sub-shopping-list/sub-shopping-list.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SubShoppingListComponent } from './shopping-list/sub-shopping-list/sub-
     TimerComponent,
     ExosComponent,
     ShoppingListComponent,
-    SubShoppingListComponent
+    SubShoppingListComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,

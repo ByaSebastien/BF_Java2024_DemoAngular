@@ -54,6 +54,10 @@ export class NavComponent {
           title: 'Shopping list',
           url: 'exo/exo02'
         },
+        {
+          title: 'Contact form',
+          url: 'exo/exo03'
+        },
       ],
     },
   ];
