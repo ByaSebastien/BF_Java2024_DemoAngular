@@ -1,0 +1,39 @@
+<section>
+  <form [formGroup]="registerForm" (ngSubmit)="submit()">
+    <div>
+      <label for="firstname">firstname :</label>
+      <input id="firstname" type="text" formControlName="firstname">
+    </div>
+    <div>
+      <label for="lastname">lastname :</label>
+      <input id="lastname" type="text" formControlName="lastname">
+    </div>
+    <div>
+      <label for="birthdate">birthdate :</label>
+      <input id="birthdate" type="date" formControlName="birthdate">
+    </div>
+    <div>
+      <label for="email">email :</label>
+      <input id="email" type="email" formControlName="email">
+    </div>
+    <div>
+      <label for="password">password :</label>
+      <input id="password" type="password" formControlName="password">
+    </div>
+    <div>
+      <label for="country">country :</label>
+      <input list="countries" id="country" type="text" formControlName="country">
+      <datalist id="countries">
+        @for (c of countries;track c){
+          <option [value]="c"></option>
+        }
+      </datalist>
+    </div>
+    <div>
+      <label for="permis">Permis</label>
+<!--      <p-multiselect [options]="cities" [(ngModel)]="selectedCities" placeholder="Select Cities" optionLabel="name" display="chip" styleClass="w-full md:w-80" />-->
+      <p-multiSelect id="permis" [options]="permis" formControlName="permis" placeholder="Select permis" display="chip" optionLabel="name" styleClass="w-full md:w-80"></p-multiSelect>
+    </div>
+    <button>Valider</button>
+  </form>
+</section>
